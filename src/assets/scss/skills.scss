@@ -1,0 +1,46 @@
+// here we had done one important thing in which , i wanted to bring whole div to up , i mean half inside above div , in which what we have to do ,give parent div , element position releative and that element margin top in negative(skills-bx)!!
+
+.skills {
+  padding: 0 0 50px 0;
+  position: relative;
+  h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  p {
+    color: #888888;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+  }
+}
+.skill-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+}
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  .item {
+    img {
+      width: 50%;
+      margin: 0 auto 15px auto;
+    }
+    h5 {
+      color: #ffffff;
+    }
+  }
+}
+.background-image-left {
+  position: absolute;
+  top: 28%;
+  bottom: 0;
+  width: 40%;
+  z-index: -8;
+}
