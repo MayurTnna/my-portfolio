@@ -5,6 +5,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 const IntroBanner = () => {
   // logic for typing effect!
@@ -48,24 +50,35 @@ const IntroBanner = () => {
         <Container>
           <Row className="align-items-center">
             <Col xs={12} md={6} xl={7}>
-              <span className="tagline">Welcome to my Portfolio</span>
-              <h1>{`Hi I'm Mayur`}</h1>
-              <span className="wrap">{text}</span>
-              <p>
-                I am a skilled front-end developer with expertise in ReactJS,
-                NextJS, Firebase, and other related technologies. With a passion
-                for building responsive, high-performing web applications, i
-                bring a creative and innovative approach to every project. With
-                strong problem-solving skills and attention to detail,i am
-                committed to delivering solutions that exceed expectations. i am
-                dedicated to staying up-to-date with the latest trends and best
-                practices in the industry and is always seeking new
-                opportunities to expand his skills and knowledge.
-              </p>
-              <button onClick={() => console.log("connext")}>
-                Let's connect
-                <ArrowRightCircle size={25} />
-              </button>
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible ? "animate__animated animate__bounce" : ""
+                    }
+                  >
+                    <span className="tagline">Welcome to my Portfolio</span>
+                    <h1>{`Hi I'm Mayur`}</h1>
+                    <span className="wrap">{text}</span>
+                    <p>
+                      I am a skilled front-end developer with expertise in
+                      ReactJS, NextJS, Firebase, and other related technologies.
+                      With a passion for building responsive, high-performing
+                      web applications, i bring a creative and innovative
+                      approach to every project. With strong problem-solving
+                      skills and attention to detail,i am committed to
+                      delivering solutions that exceed expectations. i am
+                      dedicated to staying up-to-date with the latest trends and
+                      best practices in the industry and is always seeking new
+                      opportunities to expand his skills and knowledge.
+                    </p>
+                    <button onClick={() => console.log("connext")}>
+                      Let's connect
+                      <ArrowRightCircle size={25} />
+                    </button>
+                  </div>
+                )}
+              </TrackVisibility>
             </Col>
             <Col xs={12} md={6} xl={5}>
               <img src={headerImg} alt="header img" />

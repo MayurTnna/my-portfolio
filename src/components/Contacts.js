@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Col, Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
+import "../assets/scss/contact.scss";
 
 const Contacts = () => {
   const formInitialDetails = {
@@ -20,17 +21,39 @@ const Contacts = () => {
       [category]: value,
     });
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setButtonText("sending");
+    const response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json ; charset=utf-8",
+      },
+      body: JSON.stringify(formDetails),
+    });
+    setButtonText("Send");
+    let result = response.json();
+    console.log(result);
+    setFormDetails(formInitialDetails);
+    if (result.code === 200) {
+      setStatus({ success: true, message: "Message sent successfully" });
+    } else {
+      setStatus({ success: false, message: "Message not sent " });
+    }
+  };
+
   return (
     <>
       <section className="contact " id="contact">
         <Container>
-          <Row>
+          <Row className="align-items-center">
             <Col md={6}>
-              <img src={contactImg} alt="contact-image" />
+              <img src={contactImg} alt="contact" />
             </Col>
             <Col md={6}>
               <h2>Get in Touch</h2>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <Row>
                   <Col sm={6} className="px-1">
                     <input
@@ -66,9 +89,7 @@ const Contacts = () => {
                       type="tel"
                       value={formDetails.phone}
                       placeholder="Phone number"
-                      onChange={(e) =>
-                        onFormUpdate("Phone number", e.target.value)
-                      }
+                      onChange={(e) => onFormUpdate("phone", e.target.value)}
                     />
                   </Col>
                   <Col sm={6} className="px-1">
@@ -76,7 +97,7 @@ const Contacts = () => {
                       rows="6"
                       value={formDetails.message}
                       placeholder="Enter your message"
-                      onChange={(e) => onFormUpdate("message ", e.target.value)}
+                      onChange={(e) => onFormUpdate("message", e.target.value)}
                     />
                   </Col>
                   <Col>
@@ -106,3 +127,9 @@ const Contacts = () => {
 };
 
 export default Contacts;
+
+// Yes, that's correct. The first value passed to the onFormUpdate function is the property in the formDetails state object that we want to update, and the second value is the new value that we want to set for that property.
+
+// In the Contacts component, we have initialized the formDetails state object with the initial values of an empty string for all the form fields. When the user types something into any of the form fields, we call the onFormUpdate function with the field name (e.g. "firstName", "lastName", "email", etc.) as the first argument, and the new value of the field as the second argument.
+
+// The onFormUpdate function then updates the formDetails state object with the new value for the corresponding field. This causes the value attribute of the corresponding input or textarea element to be updated with the new value from the formDetails state object.

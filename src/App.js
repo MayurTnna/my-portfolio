@@ -5,6 +5,8 @@ import NavBar from "./components/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Contacts from "./components/Contacts";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <IntroBanner />
       <Skills />
       <Projects />
+      <Contacts/>
+      <Footer/>
     </div>
   );
 }
