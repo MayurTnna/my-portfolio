@@ -9,8 +9,12 @@ import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
+
 
 const Skills = () => {
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -37,7 +41,13 @@ const Skills = () => {
           <Row>
             <Col>
               <div className="skill-bx">
-                <h2>Skills</h2>
+                <TrackVisibility>
+                  {({ isVisible }) => (
+                    <div className={isVisible ? "animate__bounceOut" : ""}>
+                      <h2>Skills</h2>
+                    </div>
+                  )}
+                </TrackVisibility>
                 <p>
                   The quick brown fox jumped over the lazy dog, who didn't seem
                   to care one bit.
