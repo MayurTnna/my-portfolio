@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
+import navIcon2 from "../assets/img/twitter3.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import "../assets/scss/navBar.scss";
 
@@ -29,6 +29,13 @@ const NavBar = () => {
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
+
+  const handleConnectClick = () => {
+    const connectLink = document.getElementById("connect");
+
+    connectLink.href = "https://localhost:3000/#connect";
+  };
+
   return (
     <>
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -87,9 +94,12 @@ const NavBar = () => {
                   <img src={navIcon3} alt="logo" />
                 </a>
               </div>
-              <button className="vvd" onClick={() => console.log("connect")}>
-                <span>Let's connect</span>
-              </button>
+              <a href="#connect">
+                {" "}
+                <button className="vvd" onClick={handleConnectClick}>
+                  <span> Let's connect</span>
+                </button>
+              </a>
             </span>
           </Navbar.Collapse>
         </Container>

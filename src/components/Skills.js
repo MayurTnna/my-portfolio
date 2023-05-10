@@ -12,9 +12,7 @@ import colorSharp from "../assets/img/color-sharp.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
-
 const Skills = () => {
-
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -49,10 +47,11 @@ const Skills = () => {
                   )}
                 </TrackVisibility>
                 <p>
-                  The quick brown fox jumped over the lazy dog, who didn't seem
-                  to care one bit.
-                  <br /> After a long day at work, she likes to unwind with a
-                  good book and a cup of tea.
+                  Browse my skills section to discover my technical and
+                  professional expertise in web development, programming
+                  languages, and graphic design. From HTML and CSS to
+                  JavaScript, Python, and Adobe Creative Suite, I have the
+                  skills and experience to deliver exceptional results.
                 </p>
                 <Carousel
                   responsive={responsive}

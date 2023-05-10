@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
 }
 .footer img {
-    width: 26%;
+    width: 26%
   }
   .footer p {
     font-weight: 400;
@@ -14,4 +14,9 @@
     color: #B8B8B8;
     letter-spacing: 0.5px;
     margin-top: 20px;
+  }
+  .social-icon{
+  a{
+    gap: 20px;
+  }
   }

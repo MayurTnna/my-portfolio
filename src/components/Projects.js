@@ -12,16 +12,17 @@ import {
 const Projects = () => {
   return (
     <>
-      <section className="project" id="project">
+      <section className="project" id="projects">
         <Container>
           <Row>
             <Col>
               <h2>Projects</h2>
               <p>
-                The quick brown fox jumped over the lazy dog, who didn't seem to
-                care one bit.
-                <br /> After a long day at work, she likes to unwind with a good
-                book and a cup of tea.
+                Explore my portfolio of innovative projects that showcase my
+                design skills and technical expertise in web development and
+                graphic design. From HTML and SCSS designs to social media
+                single-page web apps, each project reflects my passion for
+                creativity and innovation.
               </p>
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Nav
