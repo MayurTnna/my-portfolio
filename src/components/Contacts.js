@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import "../assets/scss/contact.scss";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 const Contacts = () => {
   const formInitialDetails = {
@@ -52,7 +54,13 @@ const Contacts = () => {
               <img src={contactImg} alt="contact" />
             </Col>
             <Col md={6}>
-              <h2>Get in Touch</h2>
+              <TrackVisibility>
+                  {({ isVisible }) => (
+                    <div className={isVisible ? "animate__bounceOut" : ""}>
+                      <h2>Get in Touch</h2>
+                    </div>
+                  )}
+                </TrackVisibility>
               <form onSubmit={handleSubmit}>
                 <Row>
                   <Col sm={6} className="px-1">

@@ -80,12 +80,13 @@ const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#">
+                <a href="https://www.linkedin.com/in/mayur-tanna-748a041b5" target="_blank">
                   <img src={navIcon1} alt="logo" />{" "}
                 </a>
               </div>
               <div className="social-icon">
-                <a href="#">
+                <a href="https://twitter.com/MayurTanna15?t=pcLzN0s1D0bts01U98TOMQ&s=09"
+                  target="_blank">
                   <img src={navIcon2} alt="logo" />
                 </a>
               </div>

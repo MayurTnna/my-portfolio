@@ -3,11 +3,14 @@ import "../assets/scss/projects.scss";
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+
 import {
   projects_name,
   projects_name1,
   projects_name2,
 } from "../assets/projectsName";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 const Projects = () => {
   return (
@@ -16,7 +19,13 @@ const Projects = () => {
         <Container>
           <Row>
             <Col>
-              <h2>Projects</h2>
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div className={isVisible ? "animate__bounceOut" : ""}>
+                    <h2>Projects</h2>
+                  </div>
+                )}
+              </TrackVisibility>
               <p>
                 Explore my portfolio of innovative projects that showcase my
                 design skills and technical expertise in web development and

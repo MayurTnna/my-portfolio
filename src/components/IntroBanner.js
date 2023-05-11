@@ -44,6 +44,8 @@ const IntroBanner = () => {
       setDelta(500);
     }
   };
+  const wavingHandEmoji = "\uD83D\uDC4B";
+
   return (
     <>
       <section className="banner" id="home">
@@ -58,7 +60,12 @@ const IntroBanner = () => {
                     }
                   >
                     <span className="tagline">Welcome to my Portfolio</span>
-                    <h1>{`Hi I'm Mayur`}</h1>
+                    <h1>
+                      {`Hi I'm Mayur`}{" "}
+                      <span className={isVisible ? " animate__shakeX " : ""}>
+                        {wavingHandEmoji}
+                      </span>
+                    </h1>
                     <span className="wrap">{text}</span>
                     <p>
                       I am a skilled front-end developer with expertise in
@@ -72,10 +79,16 @@ const IntroBanner = () => {
                       best practices in the industry and is always seeking new
                       opportunities to expand his skills and knowledge.
                     </p>
-                    <button onClick={() => console.log("connext")}>
-                      Let's connect
-                      <ArrowRightCircle size={25} />
-                    </button>
+                    <a
+                      href="https://github.com/MayurTnna"
+                      target="_blank"
+                      style={{ textDecoration: " none" }}
+                    >
+                      <button>
+                        Let's connect
+                        <ArrowRightCircle size={25} />
+                      </button>
+                    </a>
                   </div>
                 )}
               </TrackVisibility>

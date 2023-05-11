@@ -60,22 +60,29 @@ const Skills = () => {
                 >
                   <div className="item">
                     <img src={meter1} alt="meter1" />
-                    <h5>Web Development</h5>
-                  </div>
-                  <div className="item">
-                    <img src={meter2} alt="meter2" />
-                    <h5>Brand creator</h5>
-                  </div>
-                  <div className="item">
-                    <img src={meter3} alt="meter3" />
-                    <h5>Logo designer</h5>
+                    <h5>C</h5>
                   </div>
                   <div className="item">
                     <img src={meter1} alt="meter1" />
-                    <h5>Web Development</h5>
+                    <h5>Java</h5>
+                  </div>
+                  <div className="item">
+                    <img src={meter1} alt="meter1" />
+                    <h5>HTML5 / CSS3 / SCSS</h5>
+                  </div>
+                  <div className="item">
+                    <img src={meter2} alt="meter2" />
+                    <h5>JavaScript</h5>
+                  </div>
+                  <div className="item">
+                    <img src={meter3} alt="meter3" />
+                    <h5>ReactJS</h5>
+                  </div>
+                  <div className="item">
+                    <img src={meter1} alt="meter1" />
+                    <h5>NextJS</h5>
                   </div>
                 </Carousel>
-                ;
               </div>
             </Col>
           </Row>

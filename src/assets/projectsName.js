@@ -7,7 +7,7 @@ import s6 from "../assets/img/project/s6.png";
 import m1 from "../assets/img/project/proj1.png";
 import m2 from "../assets/img/project/proj2.png";
 import m3 from "../assets/img/project/proj2.1.png";
-import m4 from "../assets/img/project/g1.png";
+import m4 from "../assets/img/project/g1.png";  
 import m5 from "../assets/img/project/g2.png";
 import m6 from "../assets/img/project/g3.png";
 import a1 from "../assets/img/project/proj3.png";
