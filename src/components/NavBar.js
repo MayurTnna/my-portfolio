@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../assets/img/logo.svg";
+import logo from "../assets/img/mayurlogo2.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/twitter3.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
@@ -41,7 +41,7 @@ const NavBar = () => {
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="#home">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" style={{ height :"67px"}} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -80,7 +80,7 @@ const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/mayur-tanna-748a041b5" target="_blank">
+                <a href="https://www.linkedin.com/in/mayur-tanna-748a041b5"  target="_blank">
                   <img src={navIcon1} alt="logo" />{" "}
                 </a>
               </div>
@@ -96,7 +96,7 @@ const NavBar = () => {
                 </a>
               </div>
               <a href="#connect">
-                {" "}
+                
                 <button className="vvd" onClick={handleConnectClick}>
                   <span> Let's connect</span>
                 </button>
