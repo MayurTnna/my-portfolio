@@ -41,7 +41,7 @@ const NavBar = () => {
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="#home">
-            <img src={logo} alt="logo" style={{ height :"67px"}} />
+            <img src={logo} alt="logo" style={{ height: "67px" }} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -80,23 +80,33 @@ const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/mayur-tanna-748a041b5"  target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/mayur-tanna-748a041b5"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={navIcon1} alt="logo" />{" "}
                 </a>
               </div>
               <div className="social-icon">
-                <a href="https://twitter.com/MayurTanna15?t=pcLzN0s1D0bts01U98TOMQ&s=09"
-                  target="_blank">
+                <a
+                  href="https://twitter.com/MayurTanna15?t=pcLzN0s1D0bts01U98TOMQ&s=09"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={navIcon2} alt="logo" />
                 </a>
               </div>
               <div className="social-icon">
-                <a href="#">
+                <a
+                  href="https://instagram.com/mayur.tnna?igshid=ZGUzMzM3NWJiOQ=="
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={navIcon3} alt="logo" />
                 </a>
               </div>
               <a href="#connect">
-                
                 <button className="vvd" onClick={handleConnectClick}>
                   <span> Let's connect</span>
                 </button>

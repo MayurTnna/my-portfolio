@@ -40,15 +40,60 @@ const Projects = () => {
                   id="pills-tab"
                 >
                   <Nav.Item>
-                    <Nav.Link eventKey="first">option 1</Nav.Link>
+                    <Nav.Link eventKey="first">
+                      <TrackVisibility>
+                        {({ isVisible }) => (
+                          <div
+                            className={
+                              isVisible
+                                ? "animate__animated animate__bounce"
+                                : ""
+                            }
+                          >
+                            <span>&#x1F680;</span>
+                          </div>
+                        )}
+                      </TrackVisibility>
+                    </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">option 2</Nav.Link>
+                    <Nav.Link eventKey="second">
+                      {" "}
+                      <TrackVisibility>
+                        {({ isVisible }) => (
+                          <div
+                            className={
+                              isVisible
+                                ? "animate__animated animate__shakeY"
+                                : ""
+                            }
+                          >
+                            <span>&#x26A1;</span>
+                          </div>
+                        )}
+                      </TrackVisibility>
+                    </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">option 3</Nav.Link>
+                    <Nav.Link eventKey="third">
+                      {" "}
+                      <TrackVisibility>
+                        {({ isVisible }) => (
+                          <div
+                            className={
+                              isVisible
+                                ? "animate__animated animate__zoomInUp"
+                                : ""
+                            }
+                          >
+                            <span>&#x1F60E;</span>
+                          </div>
+                        )}
+                      </TrackVisibility>
+                    </Nav.Link>
                   </Nav.Item>
                 </Nav>
+
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
                     <Row>
@@ -87,7 +132,11 @@ const Projects = () => {
             </Col>
           </Row>
         </Container>
-        <img src={colorSharp2} alt="hbfdhb" className="background-image-right" />
+        <img
+          src={colorSharp2}
+          alt="hbfdhb"
+          className="background-image-right"
+        />
       </section>
     </>
   );
