@@ -23,6 +23,7 @@ const IntroBanner = () => {
     return () => {
       clearInterval(ticker);
     };
+     // eslint-disable-next-line
   }, [text]);
 
   const tick = () => {
@@ -82,6 +83,7 @@ const IntroBanner = () => {
                     <a
                       href="https://github.com/MayurTnna"
                       target="_blank"
+                      rel="noreferrer"
                       style={{ textDecoration: " none" }}
                     >
                       <button>

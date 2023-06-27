@@ -15,27 +15,39 @@ const Footer = () => {
           <Row className="align-items-center">
             <Mailchimpform />
             <Col sm={4}>
-              <img src={logo} alt="logo" className="main-image" style={{ height :"67px"}}/>
+              <img
+                src={logo}
+                alt="logo"
+                className="main-image"
+                style={{ height: "67px" }}
+              />
             </Col>
             <Col sm={6} className="text-center mt-4 text-sm-end">
               <div className="social-icon">
                 <a
                   href="https://www.linkedin.com/in/mayur-tanna-748a041b5"
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <img src={navIcon1} />
+                  <img src={navIcon1} alt="linkedinfoot" />
                 </a>
                 <a
                   href="https://twitter.com/MayurTanna15?t=pcLzN0s1D0bts01U98TOMQ&s=09"
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <img className="text-danger" src={navIcon2} />
+                  <img
+                    className="text-danger"
+                    src={navIcon2}
+                    alt="twitterFoot"
+                  />
                 </a>
                 <a
                   href="https://instagram.com/mayur.tnna?igshid=ZGUzMzM3NWJiOQ=="
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <img src={navIcon3}  />
+                  <img src={navIcon3} alt="InstaFoot" />
                 </a>
               </div>
               <p>Copyright 2023 , All rights reserved </p>
