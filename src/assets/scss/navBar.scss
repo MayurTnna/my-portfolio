@@ -28,6 +28,10 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 span.navbar-text {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 992px) {
+    justify-content: center !important;
+  }
 }
 .social-icon {
   display: inline-block;
@@ -77,6 +81,11 @@ span.navbar-text {
   position: relative;
   background-color: transparent;
   transition: 0.3s ease-in-out;
+
+  @media screen and (max-width: 400px) {
+    padding: 9px 17px !important;
+    margin-left: 0 !important;
+  }
 }
 .navbar-text button span {
   z-index: 1;
